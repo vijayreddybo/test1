@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: test1
+  description: demo catalog-info created for test1 for backstage
+  links:
+    - title: Website
+      url: https://github.com/vijayreddybo/test1/new/main
+    - title: Documentation
+      url: https://github.com/vijayreddybo/test1/tree/main/docs
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - demo
+spec:
+  type: service
+  owner: vijay
+  system: NBI
+  lifecycle: experimental
+  providesApis:
+    - demo-api
+  dependsOn:
+    - component:default/test2
